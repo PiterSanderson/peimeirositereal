@@ -338,8 +338,12 @@ code {
   /* =======================================================
      NOTEBOOK — MOBILE
 
-     Mantém o tamanho e a distância.
-     O conjunto é deslocado para a direita.
+     TAMANHO: mantido
+     POSIÇÃO BASE: mantida
+     DISTÂNCIA: mantida
+
+     Apenas deslocamos visualmente o notebook
+     para a direita junto com o celular.
      ======================================================= */
 
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:first-child {
@@ -347,14 +351,17 @@ code {
     top: 12px;
     width: 110%;
     max-width: none;
-    transform: translateX(-50%) translateX(10vw);
+    transform: translateX(calc(-50% + 10vw + 40px));
   }
 
   /* =======================================================
      CELULAR — MOBILE
 
-     Mantém o tamanho e a distância.
-     Acompanha exatamente o deslocamento do notebook.
+     TAMANHO: mantido
+     POSIÇÃO BASE: mantida
+     DISTÂNCIA: mantida
+
+     O mesmo deslocamento horizontal do notebook.
      ======================================================= */
 
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:last-child {
@@ -363,7 +370,7 @@ code {
     bottom: 0;
     width: 29%;
     max-width: 125px;
-    transform: translateX(10vw);
+    transform: translateX(calc(10vw + 40px));
     z-index: 5;
   }
 
