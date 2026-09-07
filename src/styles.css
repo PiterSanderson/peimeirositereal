@@ -57,19 +57,23 @@ code {
   min-height: 100vh;
   overflow: hidden;
   background-color: #030509;
+
   background-image:
     linear-gradient(
       rgba(0, 0, 0, 0.30),
       rgba(0, 0, 0, 0.30)
     ),
     url("/imagem-fundo.png");
+
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
 
-/* Atmosfera azul suave no fundo */
+/* =========================================================
+   ATMOSFERA AZUL SUAVE NO FUNDO
+   ========================================================= */
 
 .site-background::before {
   content: "";
@@ -91,7 +95,9 @@ code {
     );
 }
 
-/* Linhas fluidas ambientais */
+/* =========================================================
+   LINHAS FLUIDAS AMBIENTAIS
+   ========================================================= */
 
 .site-background::after {
   content: "";
@@ -329,29 +335,41 @@ code {
     overflow: visible;
   }
 
-  /* NOTEBOOK — centraliza o conjunto */
+  /* =======================================================
+     NOTEBOOK — MOBILE
+
+     Mantém o tamanho e a distância.
+     O conjunto é deslocado para a direita.
+     ======================================================= */
 
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:first-child {
-    left: 87%;
+    left: 72%;
     top: 12px;
     width: 110%;
     max-width: none;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateX(10vw);
   }
 
-  /* CELULAR — mantém a distância atual e acompanha o notebook */
+  /* =======================================================
+     CELULAR — MOBILE
+
+     Mantém o tamanho e a distância.
+     Acompanha exatamente o deslocamento do notebook.
+     ======================================================= */
 
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:last-child {
     left: auto;
-    right: 12%;
+    right: 27%;
     bottom: 0;
     width: 29%;
     max-width: 125px;
-    transform: none;
+    transform: translateX(10vw);
     z-index: 5;
   }
 
-  /* BRILHO CENTRAL */
+  /* =======================================================
+     BRILHO CENTRAL
+     ======================================================= */
 
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl::before {
     width: 520px;
@@ -361,7 +379,9 @@ code {
     filter: blur(45px);
   }
 
-  /* BRILHO LATERAL */
+  /* =======================================================
+     BRILHO LATERAL
+     ======================================================= */
 
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl::after {
     width: 220px;
