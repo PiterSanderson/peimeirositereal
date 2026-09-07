@@ -231,22 +231,22 @@ function LandingPage() {
           {/* MOCKUP DOS DISPOSITIVOS
               Agora cada arquivo já é a imagem COMPLETA do dispositivo,
               com fundo transparente. Não usamos mais frame + tela separados. */}
-          <div className="relative mx-auto mt-2 w-full max-w-6xl h-[320px] sm:h-[420px] md:h-[500px] lg:h-[560px]">
+          <div className="relative mx-auto mt-2 w-full max-w-6xl h-[250px] sm:h-[360px] md:h-[500px] lg:h-[560px]">
             {/* Notebook / Laptop */}
             <img
               src="/imagem-geral-notebook.png"
               alt="Site profissional em notebook"
               loading="lazy"
-              className="absolute left-1/2 top-0 w-[92%] sm:w-[88%] md:w-[82%] lg:w-[78%] -translate-x-1/2 object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.45)]"
+              className="absolute left-1/2 top-0 w-[100%] sm:w-[88%] md:w-[82%] lg:w-[78%] -translate-x-1/2 object-contain drop-shadow-[0_25px_60px_rgba(0,0,0,0.45)]"
             />
 
-            {/* Smartphone / iPhone — sobreposto no canto inferior direito,
-                como no mockup de referência */}
+            {/* Smartphone / iPhone — mais próximo do notebook no celular,
+                mantendo o posicionamento original em telas maiores */}
             <img
               src="/imagem-geral-iphone.png"
               alt="Site profissional em celular"
               loading="lazy"
-              className="absolute right-[1%] sm:right-[4%] md:right-[7%] lg:right-[9%] bottom-0 z-20 w-[25%] sm:w-[22%] md:w-[19%] lg:w-[17%] max-w-[245px] object-contain drop-shadow-[0_20px_45px_rgba(0,0,0,0.55)]"
+              className="absolute right-[3%] sm:right-[4%] md:right-[7%] lg:right-[9%] bottom-0 z-20 w-[30%] sm:w-[22%] md:w-[19%] lg:w-[17%] max-w-[245px] object-contain drop-shadow-[0_20px_45px_rgba(0,0,0,0.55)]"
             />
           </div>
         </div>
