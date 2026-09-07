@@ -188,15 +188,15 @@ code {
 }
 
 /* =========================================================
-   NOTEBOOK (DESKTOP)
+   NOTEBOOK
    ========================================================= */
 
 #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:first-child {
   position: absolute;
-  left: 50%;
+  left: 90%;
   top: 0;
 
-  width: 85%;
+  width: 108%;
   max-width: none;
   height: auto;
 
@@ -214,16 +214,17 @@ code {
 }
 
 /* =========================================================
-   CELULAR (DESKTOP)
+   CELULAR
    ========================================================= */
 
 #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:last-child {
   position: absolute;
 
-  right: 12%;
+  right: 8%;
   bottom: 0;
+  left: 60%;
 
-  width: 22%;
+  width: 24%;
   max-width: 270px;
   height: auto;
 
@@ -311,11 +312,12 @@ code {
   }
 
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:first-child {
-    width: 90%;
+    width: 112%;
   }
 
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:last-child {
-    right: 8%;
+    right: 5%;
+    left: auto;
     width: 25%;
     max-width: 205px;
   }
@@ -332,59 +334,56 @@ code {
 }
 
 /* =========================================================
-   RESPONSIVO — CELULAR (CORRIGIDO)
+   RESPONSIVO — CELULAR (AJUSTADO E CENTRALIZADO)
    ========================================================= */
 
 @media (max-width: 640px) {
 
+  /* Container com tamanho travado e centralizado no mobile */
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl {
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    min-height: 280px;
-    margin-top: 1rem;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    position: relative !important;
+    width: 100% !important;
+    max-width: 360px !important;
+    height: 240px !important;
+    margin: 1.5rem auto 0 !important;
+    overflow: visible !important;
   }
 
-  /* Notebook centralizado e ajustado para o tamanho da tela */
+  /* Notebook centralizado no meio da tela */
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:first-child {
-    position: relative;
-    left: auto;
-    top: auto;
-    width: 92%;
-    max-width: 480px;
-    height: auto;
-    transform: none;
-    margin: 0 auto;
-    z-index: 2;
+    position: absolute !important;
+    left: 42% !important;
+    top: 0 !important;
+    width: 88% !important;
+    height: auto !important;
+    transform: translateX(-50%) !important;
+    z-index: 2 !important;
   }
 
-  /* Celular sobreposto à direita do notebook de forma proporcional */
+  /* Celular sobreposto à direita do notebook */
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:last-child {
-    position: absolute;
-    left: auto;
-    right: 2%;
-    bottom: -5%;
-    width: 32%;
-    max-width: 140px;
-    height: auto;
-    transform: none;
-    z-index: 5;
+    position: absolute !important;
+    right: 2% !important;
+    left: auto !important;
+    bottom: -5px !important;
+    width: 28% !important;
+    max-width: 110px !important;
+    height: auto !important;
+    transform: none !important;
+    z-index: 5 !important;
   }
 
-  /* Brilho central ajustado */
+  /* Ajuste do brilho de fundo no mobile */
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl::before {
-    width: 100%;
-    height: 200px;
-    left: 50%;
-    bottom: 0;
-    filter: blur(40px);
+    width: 100% !important;
+    height: 180px !important;
+    left: 50% !important;
+    bottom: -10px !important;
+    filter: blur(35px) !important;
   }
 
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl::after {
-    display: none;
+    display: none !important;
   }
 }
 
