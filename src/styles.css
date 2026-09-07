@@ -57,14 +57,12 @@ code {
   min-height: 100vh;
   overflow: hidden;
   background-color: #030509;
-
   background-image:
     linear-gradient(
       rgba(0, 0, 0, 0.30),
       rgba(0, 0, 0, 0.30)
     ),
     url("/imagem-fundo.png");
-
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -86,7 +84,6 @@ code {
       rgba(49, 95, 234, 0.035),
       transparent 72%
     ),
-
     radial-gradient(
       ellipse 55% 20% at 82% 58%,
       rgba(49, 95, 234, 0.035),
@@ -138,7 +135,6 @@ code {
   right: -30%;
   bottom: -190px;
   height: 420px;
-
   pointer-events: none;
   z-index: -1;
 
@@ -163,7 +159,6 @@ code {
   right: -20%;
   bottom: -130px;
   height: 300px;
-
   pointer-events: none;
   z-index: -1;
 
@@ -180,9 +175,12 @@ code {
 /* =========================================================
    MOCKUP COMPLETO — NOTEBOOK + CELULAR
    =========================================================
+
    As imagens já são completas e possuem fundo transparente.
+
    Não usamos frame/tela separados.
-   O celular fica SOBRE o notebook, como no mockup de referência.
+
+   O celular fica SOBRE o notebook.
    ========================================================= */
 
 #hero .relative.mx-auto.mt-2.w-full.max-w-6xl {
@@ -206,14 +204,14 @@ code {
   max-width: none;
   height: auto;
   display: block;
-
   transform: translateX(-50%);
   object-fit: contain;
-
   z-index: 2;
   pointer-events: none;
 
-  filter: drop-shadow(0 25px 35px rgba(0, 0, 0, 0.78));
+  filter: drop-shadow(
+    0 25px 35px rgba(0, 0, 0, 0.78)
+  );
 }
 
 /* =========================================================
@@ -225,20 +223,20 @@ code {
   right: 8%;
   bottom: 0;
   left: 60%;
-
   width: 24%;
   max-width: 270px;
   height: auto;
   display: block;
-
   transform: none;
   object-fit: contain;
 
-  /* IMPORTANTE: fica na frente do notebook */
+  /* Fica na frente do notebook */
   z-index: 5;
   pointer-events: none;
 
-  filter: drop-shadow(0 20px 35px rgba(0, 0, 0, 0.88));
+  filter: drop-shadow(
+    0 20px 35px rgba(0, 0, 0, 0.88)
+  );
 }
 
 /* =========================================================
@@ -248,13 +246,10 @@ code {
 #hero .relative.mx-auto.mt-2.w-full.max-w-6xl::before {
   content: "";
   position: absolute;
-
   width: 900px;
   height: 440px;
-
   left: 50%;
   bottom: -65px;
-
   transform: translateX(-50%);
   pointer-events: none;
   z-index: 0;
@@ -278,13 +273,10 @@ code {
 #hero .relative.mx-auto.mt-2.w-full.max-w-6xl::after {
   content: "";
   position: absolute;
-
   width: 430px;
   height: 430px;
-
   right: 2%;
   bottom: 0;
-
   pointer-events: none;
   z-index: 1;
 
@@ -304,6 +296,7 @@ code {
    ========================================================= */
 
 @media (max-width: 900px) {
+
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl {
     max-width: 900px;
     height: 470px;
@@ -335,19 +328,31 @@ code {
    ========================================================= */
 
 @media (max-width: 640px) {
+
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl {
     height: 335px;
     margin-top: 0.25rem;
   }
 
+  /* NOTEBOOK
+     Mantém o notebook centralizado e evita
+     que ele fique exageradamente deslocado
+     para a esquerda.
+  */
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:first-child {
-    width: 125%;
-    left: 48%;
+    width: 110%;
+    left: 50%;
     top: 12px;
   }
 
+  /* CELULAR
+     Remove o left: 60% herdado do desktop.
+     Isso permite que right seja o responsável
+     pelo posicionamento no mobile.
+  */
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:last-child {
-    right: 1%;
+    left: auto;
+    right: 8%;
     bottom: 0;
     width: 29%;
     max-width: 125px;
