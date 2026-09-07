@@ -188,15 +188,15 @@ code {
 }
 
 /* =========================================================
-   NOTEBOOK
+   NOTEBOOK (DESKTOP)
    ========================================================= */
 
 #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:first-child {
   position: absolute;
-  left: 90%;
+  left: 50%;
   top: 0;
 
-  width: 108%;
+  width: 85%;
   max-width: none;
   height: auto;
 
@@ -214,17 +214,16 @@ code {
 }
 
 /* =========================================================
-   CELULAR
+   CELULAR (DESKTOP)
    ========================================================= */
 
 #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:last-child {
   position: absolute;
 
-  right: 8%;
+  right: 12%;
   bottom: 0;
-  left: 60%;
 
-  width: 24%;
+  width: 22%;
   max-width: 270px;
   height: auto;
 
@@ -312,12 +311,11 @@ code {
   }
 
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:first-child {
-    width: 112%;
+    width: 90%;
   }
 
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:last-child {
-    right: 5%;
-    left: auto;
+    right: 8%;
     width: 25%;
     max-width: 205px;
   }
@@ -334,88 +332,59 @@ code {
 }
 
 /* =========================================================
-   RESPONSIVO — CELULAR
+   RESPONSIVO — CELULAR (CORRIGIDO)
    ========================================================= */
 
 @media (max-width: 640px) {
 
-  /* =======================================================
-     ÁREA DO MOCKUP
-     ======================================================= */
-
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl {
     width: 100%;
     max-width: 100%;
-    height: 390px;
-    margin-top: 0.25rem;
-    overflow: visible;
+    height: auto;
+    min-height: 280px;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
 
-  /* =======================================================
-     NOTEBOOK — MAIOR NO CELULAR
-     ======================================================= */
-
+  /* Notebook centralizado e ajustado para o tamanho da tela */
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:first-child {
-    position: absolute;
-
-    left: 72%;
-    top: 0;
-
-    width: 135%;
-    max-width: none;
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 92%;
+    max-width: 480px;
     height: auto;
-
-    transform: translateX(-50%);
-
+    transform: none;
+    margin: 0 auto;
     z-index: 2;
   }
 
-  /* =======================================================
-     CELULAR — MAIOR E PRÓXIMO DO NOTEBOOK
-     ======================================================= */
-
+  /* Celular sobreposto à direita do notebook de forma proporcional */
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl > img:last-child {
     position: absolute;
-
     left: auto;
-    right: 19%;
-    bottom: 0;
-
-    width: 36%;
-    max-width: 155px;
+    right: 2%;
+    bottom: -5%;
+    width: 32%;
+    max-width: 140px;
     height: auto;
-
     transform: none;
-
     z-index: 5;
   }
 
-  /* =======================================================
-     BRILHO CENTRAL
-     ======================================================= */
-
+  /* Brilho central ajustado */
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl::before {
-    width: 600px;
-    height: 290px;
-
+    width: 100%;
+    height: 200px;
     left: 50%;
-    bottom: -40px;
-
-    filter: blur(48px);
+    bottom: 0;
+    filter: blur(40px);
   }
 
-  /* =======================================================
-     BRILHO LATERAL
-     ======================================================= */
-
   #hero .relative.mx-auto.mt-2.w-full.max-w-6xl::after {
-    width: 250px;
-    height: 250px;
-
-    right: -2%;
-    bottom: 0;
-
-    filter: blur(52px);
+    display: none;
   }
 }
 
@@ -427,4 +396,3 @@ code {
   user-select: none;
   -webkit-user-drag: none;
 }
-
