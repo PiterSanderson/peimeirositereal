@@ -13,7 +13,8 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Solutions Dev | Sites Profissionais que Vendem 24h - Barbearias, Restaurantes e Hamburguerias',
+        title:
+          'Solutions Dev | Seu site online em 24h!',
       },
       {
         name: 'description',
@@ -22,7 +23,8 @@ export const Route = createRootRoute({
       },
       {
         property: 'og:title',
-        content: 'Solutions Dev | Seu negócio merece um site que vende enquanto você dorme',
+        content:
+          'Solutions Dev | Seu negócio merece um site que vende enquanto você dorme',
       },
       {
         property: 'og:description',
@@ -42,7 +44,13 @@ export const Route = createRootRoute({
         content: '#0a192f',
       },
     ],
+
     links: [
+      {
+        rel: 'icon',
+        href: '/favicon.ico',
+        type: 'image/x-icon',
+      },
       {
         rel: 'preconnect',
         href: 'https://fonts.googleapis.com',
@@ -54,10 +62,12 @@ export const Route = createRootRoute({
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap',
+        href:
+          'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap',
       },
     ],
   }),
+
   shellComponent: RootDocument,
 })
 
@@ -77,12 +87,16 @@ function RootDocument({ children }: { children: React.ReactNode }) {
     <html lang="pt-BR">
       <head>
         <HeadContent />
+
         <script
           type="application/ld+json"
           // eslint-disable-next-line react/no-danger
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessSchema),
+          }}
         />
       </head>
+
       <body>
         {children}
         <Scripts />
